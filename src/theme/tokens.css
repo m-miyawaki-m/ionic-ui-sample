@@ -14,6 +14,9 @@ html[data-theme="light"] {
   --app-text:           #1a1a1a;  /* 通常の文字色 */
   --app-text-muted:     #6b7280;  /* 補助・キャプション */
   --app-text-on-primary:#ffffff;  /* 主色の上に乗る文字 */
+  --app-text-on-success: #ffffff;
+  --app-text-on-warning: #1a1a1a;
+  --app-text-on-danger:  #ffffff;
   /* 罫線 */
   --app-border:         #d8d8de;  /* 枠線・区切り線 */
   /* アクセント */
@@ -34,7 +37,10 @@ html[data-theme="dark"] {
   --app-surface-2:      #26272e;
   --app-text:           #f2f2f5;
   --app-text-muted:     #9aa0aa;
-  --app-text-on-primary:#ffffff;
+  --app-text-on-primary:#121316;
+  --app-text-on-success: #121316;
+  --app-text-on-warning: #121316;
+  --app-text-on-danger:  #121316;
   --app-border:         #3a3b42;
   --app-primary:        #60a5fa;
   --app-primary-rgb:    96, 165, 250;
@@ -54,6 +60,9 @@ html[data-theme="practice"] {
   --app-text:           #3a2f1b;
   --app-text-muted:     #8a7a5c;
   --app-text-on-primary:#ffffff;
+  --app-text-on-success: #ffffff;
+  --app-text-on-warning: #ffffff;
+  --app-text-on-danger:  #ffffff;
   --app-border:         #e0c79a;
   --app-primary:        #c2410c;
   --app-primary-rgb:    194, 65, 12;

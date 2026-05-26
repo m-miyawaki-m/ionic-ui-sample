@@ -18,6 +18,7 @@
   /* 補助文字 */
   --ion-color-step-500:        var(--app-text-muted);
 
+  /* 注: shade/tint はこのサンプルでは基準色と同値（押下時の濃淡差は付けていません）。 */
   /* primary */
   --ion-color-primary:          var(--app-primary);
   --ion-color-primary-rgb:      var(--app-primary-rgb);
@@ -29,7 +30,7 @@
   /* success */
   --ion-color-success:          var(--app-success);
   --ion-color-success-rgb:      var(--app-success-rgb);
-  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast: var(--app-text-on-success);
   --ion-color-success-contrast-rgb: 255, 255, 255;
   --ion-color-success-shade:    var(--app-success);
   --ion-color-success-tint:     var(--app-success);
@@ -37,7 +38,7 @@
   /* warning */
   --ion-color-warning:          var(--app-warning);
   --ion-color-warning-rgb:      var(--app-warning-rgb);
-  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast: var(--app-text-on-warning);
   --ion-color-warning-contrast-rgb: 255, 255, 255;
   --ion-color-warning-shade:    var(--app-warning);
   --ion-color-warning-tint:     var(--app-warning);
@@ -45,7 +46,7 @@
   /* danger */
   --ion-color-danger:           var(--app-danger);
   --ion-color-danger-rgb:       var(--app-danger-rgb);
-  --ion-color-danger-contrast:  #ffffff;
+  --ion-color-danger-contrast:  var(--app-text-on-danger);
   --ion-color-danger-contrast-rgb: 255, 255, 255;
   --ion-color-danger-shade:     var(--app-danger);
   --ion-color-danger-tint:      var(--app-danger);

@@ -1,8 +1,9 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { setTheme, isThemeName, useTheme } from '../composables/useTheme';
+import { setTheme, isThemeName, useTheme, initTheme } from '../composables/useTheme';
 
 describe('useTheme', () => {
   beforeEach(() => {
+    setTheme('light');
     localStorage.clear();
     document.documentElement.removeAttribute('data-theme');
   });
@@ -26,5 +27,21 @@ describe('useTheme', () => {
     const { theme, themes } = useTheme();
     expect(theme.value).toBe('practice');
     expect(themes).toEqual(['light', 'dark', 'practice']);
+  });
+
+  it('initTheme は保存済みの有効なテーマを復元する', async () => {
+    localStorage.setItem('app-theme', 'dark');
+    await initTheme();
+    const { theme } = useTheme();
+    expect(theme.value).toBe('dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
+  });
+
+  it('initTheme は無効な保存値を light にフォールバックする', async () => {
+    localStorage.setItem('app-theme', 'neon');
+    await initTheme();
+    const { theme } = useTheme();
+    expect(theme.value).toBe('light');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('light');
   });
 });
