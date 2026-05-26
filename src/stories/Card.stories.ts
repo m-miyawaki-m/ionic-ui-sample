@@ -29,3 +29,23 @@ export const Playground: Story = {
       </ion-card>`,
   }),
 };
+
+export const Showcase: Story = {
+  render: () => ({
+    components: { IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent },
+    template: `
+      <div style="padding:16px; max-width:480px; display:flex; flex-direction:column; gap:16px;">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>サブタイトル</ion-card-subtitle>
+            <ion-card-title>カードタイトル</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>カードの本文テキストです。背景・文字色はテーマに追従します。</ion-card-content>
+        </ion-card>
+        <ion-card color="primary">
+          <ion-card-header><ion-card-title>主色カード</ion-card-title></ion-card-header>
+          <ion-card-content>color="primary" を指定した例。</ion-card-content>
+        </ion-card>
+      </div>`,
+  }),
+};

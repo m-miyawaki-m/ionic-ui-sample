@@ -24,3 +24,26 @@ export const Playground: Story = {
     template: '<ion-list><ion-item><ion-input v-bind="args" /></ion-item></ion-list>',
   }),
 };
+
+export const Showcase: Story = {
+  render: () => ({
+    components: { IonInput, IonItem, IonList },
+    template: `
+      <div style="padding:16px; max-width:480px;">
+        <ion-list>
+          <ion-item>
+            <ion-input label="名前" label-placement="floating" placeholder="山田太郎" />
+          </ion-item>
+          <ion-item>
+            <ion-input label="メール" type="email" label-placement="stacked" placeholder="a@example.com" />
+          </ion-item>
+          <ion-item>
+            <ion-input label="パスワード" type="password" label-placement="floating" />
+          </ion-item>
+          <ion-item>
+            <ion-input label="クリア可" :clear-input="true" value="編集してください" />
+          </ion-item>
+        </ion-list>
+      </div>`,
+  }),
+};
