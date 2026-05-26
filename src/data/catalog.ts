@@ -28,6 +28,7 @@ export const componentSamples: SampleEntry[] = [
   { id: 'fab',       title: 'FAB',                 route: '/components/fab',        category: 'component', description: 'フローティングボタン' },
   { id: 'overlays',  title: 'Overlays',            route: '/components/overlays',  category: 'component', description: 'Modal/Alert/ActionSheet/Toast' },
   { id: 'indicators',title: 'Indicators',          route: '/components/indicators',category: 'component', description: 'Loading/Spinner/Progress' },
+  { id: 'icon-button',title: 'IconButton',         route: '/components/icon-button',category: 'component', description: 'アイコン+ラベルの複合ボタン（自作部品）' },
 ];
 
 export const pageSamples: SampleEntry[] = [

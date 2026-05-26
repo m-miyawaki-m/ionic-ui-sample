@@ -21,4 +21,5 @@ export const componentDemoRegistry: Record<string, () => Promise<{ default: Comp
   fab:        () => import('./FabDemo.vue'),
   overlays:   () => import('./OverlaysDemo.vue'),
   indicators: () => import('./IndicatorsDemo.vue'),
+  'icon-button': () => import('./IconButtonDemo.vue'),
 };
