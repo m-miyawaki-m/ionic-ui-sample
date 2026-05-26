@@ -1,0 +1,45 @@
+import type { Preview } from '@storybook/vue3';
+import { setup } from '@storybook/vue3';
+import { IonicVue } from '@ionic/vue';
+
+import '@ionic/vue/css/core.css';
+import '@ionic/vue/css/normalize.css';
+import '@ionic/vue/css/structure.css';
+import '@ionic/vue/css/typography.css';
+
+import '../src/theme/tokens.css';
+import '../src/theme/ionic-bridge.css';
+
+setup((app) => {
+  app.use(IonicVue);
+});
+
+const preview: Preview = {
+  parameters: {
+    controls: { matchers: { color: /(background|color)$/i, date: /Date$/i } },
+  },
+  globalTypes: {
+    theme: {
+      description: 'アプリのテーマ',
+      defaultValue: 'light',
+      toolbar: {
+        title: 'Theme',
+        icon: 'paintbrush',
+        items: [
+          { value: 'light', title: 'ライト' },
+          { value: 'dark', title: 'ダーク' },
+          { value: 'practice', title: '練習' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
+  decorators: [
+    (story, context) => {
+      document.documentElement.setAttribute('data-theme', context.globals.theme);
+      return { components: { story }, template: '<story />' };
+    },
+  ],
+};
+
+export default preview;

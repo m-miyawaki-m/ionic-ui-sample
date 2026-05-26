@@ -48,3 +48,5 @@ coverage/
 # Vite / TS cache
 *.tsbuildinfo
 .vite/
+
+*storybook.log
