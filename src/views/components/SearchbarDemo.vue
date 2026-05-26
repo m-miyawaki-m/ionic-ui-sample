@@ -2,7 +2,7 @@
   <demo-layout title="Searchbar">
     <ion-searchbar placeholder="検索" />
     <ion-searchbar :animated="true" placeholder="アニメーション" show-clear-button="focus" />
-    <ion-searchbar color="light" placeholder="色付き" />
+    <ion-searchbar value="入力済みの例" placeholder="検索" />
   </demo-layout>
 </template>
 

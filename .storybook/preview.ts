@@ -1,5 +1,5 @@
-import type { Preview } from '@storybook/vue3';
-import { setup } from '@storybook/vue3';
+import type { Preview } from '@storybook/vue3-vite';
+import { setup } from '@storybook/vue3-vite';
 import { IonicVue } from '@ionic/vue';
 
 import '@ionic/vue/css/core.css';

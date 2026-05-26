@@ -12,4 +12,6 @@
 
 <script setup lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton } from '@ionic/vue';
+
+defineOptions({ name: 'TabHome' });
 </script>

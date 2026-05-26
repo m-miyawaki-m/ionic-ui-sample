@@ -15,4 +15,6 @@
 
 <script setup lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton, IonSearchbar } from '@ionic/vue';
+
+defineOptions({ name: 'TabSearch' });
 </script>

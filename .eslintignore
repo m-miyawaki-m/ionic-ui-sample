@@ -4,6 +4,7 @@ node_modules
 /dist
 /ios
 /android
+/storybook-static
 
 
 # local env files

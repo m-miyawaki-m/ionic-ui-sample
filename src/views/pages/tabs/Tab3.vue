@@ -19,4 +19,6 @@
 
 <script setup lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton, IonList, IonItem, IonAvatar, IonLabel } from '@ionic/vue';
+
+defineOptions({ name: 'TabProfile' });
 </script>
