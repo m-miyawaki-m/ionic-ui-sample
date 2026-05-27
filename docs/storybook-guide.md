@@ -291,7 +291,7 @@ const meta: Meta = {
 
 ### `.storybook/preview.ts`
 
-- `setup` で `IonicVue` を登録し、Ionic のコア CSS とプロジェクトのデザイントークン CSS（`tokens.css` / `ionic-bridge.css` / `design-tokens.css` / `ds-icons.css`）、Noto Sans JP フォントを読み込み
+- `setup` で `IonicVue` を登録し、Ionic のコア CSS とプロジェクトのデザイントークン CSS（`design-tokens.css`〔土台パレット＋部品トークン〕 / `ionic-bridge.css`）、Noto Sans JP フォントを読み込み（旧 `tokens.css`・`ds-icons.css` は統合・撤去済み）
 - `tags: ['autodocs']` を全体に設定（→ 各ストーリーでの autodocs 指定は不要）
 - `controls.matchers` で `background`/`color` 系をカラーピッカー、`Date` 系を日付入力に自動割り当て
 - **テーマ切替ツールバー**（`globalTypes.theme`）… ツールバーから `light` / `dark` / `practice` を選ぶと、`decorators` が `<html data-theme="...">` を切り替える。デザイントークンの確認に使う
