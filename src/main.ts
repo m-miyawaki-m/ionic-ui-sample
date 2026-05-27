@@ -26,7 +26,6 @@ import './theme/design-tokens.css';
 import './theme/ionic-bridge.css';
 import '@fontsource/noto-sans-jp/400.css';
 import '@fontsource/noto-sans-jp/700.css';
-import './theme/ds-icons.css';
 
 import { initTheme } from './composables/useTheme';
 
