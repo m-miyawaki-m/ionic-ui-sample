@@ -4,11 +4,58 @@ import { IonInput, IonItem, IonList } from '@ionic/vue';
 const meta: Meta = {
   title: 'Components/Input',
   argTypes: {
-    label: { control: 'text' },
-    labelPlacement: { control: 'select', options: ['floating', 'stacked', 'fixed', 'start', 'end'] },
-    type: { control: 'select', options: ['text', 'email', 'password', 'number'] },
-    placeholder: { control: 'text' },
-    clearInput: { control: 'boolean' },
+    label: {
+      control: 'text',
+      description: 'ラベルテキスト',
+      table: { type: { summary: 'string' } },
+    },
+    labelPlacement: {
+      control: 'select',
+      options: ['start', 'end', 'fixed', 'floating', 'stacked'],
+      description: 'ラベルの配置',
+      table: { type: { summary: "'start' | 'end' | 'fixed' | 'floating' | 'stacked'" }, defaultValue: { summary: 'start' } },
+    },
+    type: {
+      control: 'select',
+      options: ['text', 'email', 'password', 'number', 'tel', 'url'],
+      description: '入力タイプ',
+      table: { type: { summary: "'text' | 'email' | 'password' | 'number' | 'tel' | 'url'" }, defaultValue: { summary: 'text' } },
+    },
+    placeholder: {
+      control: 'text',
+      description: 'プレースホルダー',
+      table: { type: { summary: 'string' } },
+    },
+    value: {
+      control: 'text',
+      description: '入力値',
+      table: { type: { summary: 'string' } },
+    },
+    clearInput: {
+      control: 'boolean',
+      description: 'クリアボタンを表示',
+      table: { type: { summary: 'boolean' }, defaultValue: { summary: 'false' } },
+    },
+    disabled: {
+      control: 'boolean',
+      description: '無効化',
+      table: { type: { summary: 'boolean' }, defaultValue: { summary: 'false' } },
+    },
+    readonly: {
+      control: 'boolean',
+      description: '読み取り専用',
+      table: { type: { summary: 'boolean' }, defaultValue: { summary: 'false' } },
+    },
+    counter: {
+      control: 'boolean',
+      description: '文字数カウンターを表示',
+      table: { type: { summary: 'boolean' }, defaultValue: { summary: 'false' } },
+    },
+    maxlength: {
+      control: 'number',
+      description: '最大文字数',
+      table: { type: { summary: 'number' } },
+    },
   },
   args: { label: '名前', labelPlacement: 'floating', type: 'text', placeholder: '入力してください', clearInput: true },
 };

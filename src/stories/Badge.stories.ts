@@ -5,8 +5,17 @@ import { checkmarkCircle } from 'ionicons/icons';
 const meta: Meta = {
   title: 'Components/Badge',
   argTypes: {
-    color: { control: 'select', options: ['primary', 'success', 'warning', 'danger'] },
-    text: { control: 'text' },
+    color: {
+      control: 'select',
+      options: ['primary', 'success', 'warning', 'danger'],
+      description: 'テーマカラー',
+      table: { type: { summary: "'primary' | 'success' | 'warning' | 'danger'" }, defaultValue: { summary: 'primary' } },
+    },
+    text: {
+      control: 'text',
+      description: 'バッジに表示するテキスト（スロット）',
+      table: { type: { summary: 'string' } },
+    },
   },
   args: { color: 'primary', text: '12' },
 };

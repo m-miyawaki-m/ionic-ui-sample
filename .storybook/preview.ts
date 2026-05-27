@@ -15,6 +15,7 @@ setup((app) => {
 });
 
 const preview: Preview = {
+  tags: ['autodocs'],
   parameters: {
     controls: { matchers: { color: /(background|color)$/i, date: /Date$/i } },
   },
