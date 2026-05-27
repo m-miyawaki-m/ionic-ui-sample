@@ -8,6 +8,21 @@ export interface TokenEntry {
 }
 
 export const tokenRegistry: TokenEntry[] = [
+  // Base palette（--ion-* の駆動元）
+  { name: '--app-bg', label: '基本背景', category: 'Base', kind: 'color' },
+  { name: '--app-surface', label: '面（カード/リスト）', category: 'Base', kind: 'color' },
+  { name: '--app-surface-2', label: '面（ヘッダ等）', category: 'Base', kind: 'color' },
+  { name: '--app-text', label: '本文文字', category: 'Base', kind: 'color' },
+  { name: '--app-text-muted', label: '補助文字', category: 'Base', kind: 'color' },
+  { name: '--app-text-on-primary', label: '主色上の文字', category: 'Base', kind: 'color' },
+  { name: '--app-text-on-success', label: '成功色上の文字', category: 'Base', kind: 'color' },
+  { name: '--app-text-on-warning', label: '警告色上の文字', category: 'Base', kind: 'color' },
+  { name: '--app-text-on-danger', label: '危険色上の文字', category: 'Base', kind: 'color' },
+  { name: '--app-border', label: '罫線', category: 'Base', kind: 'color' },
+  { name: '--app-primary', label: '主色', category: 'Base', kind: 'color' },
+  { name: '--app-success', label: '成功', category: 'Base', kind: 'color' },
+  { name: '--app-warning', label: '警告', category: 'Base', kind: 'color' },
+  { name: '--app-danger', label: '危険', category: 'Base', kind: 'color' },
   { name: '--bg-base', label: '背景（基本）', category: 'Background', kind: 'color' },
   { name: '--bg-pattern', label: '背景（パターン）', category: 'Background', kind: 'raw' },
   { name: '--menu-color-1', label: 'メニュー 通常', category: 'Menu', kind: 'color' },

@@ -20,4 +20,14 @@ describe('token-registry', () => {
     expect(colorTokens.every((t: TokenEntry) => t.kind === 'color')).toBe(true);
     expect(colorTokens.length).toBeGreaterThan(20);
   });
+
+  it('土台パレット(--app-*)も編集対象として含む', () => {
+    const names = tokenRegistry.map((t) => t.name);
+    for (const n of ['--app-bg', '--app-text', '--app-border', '--app-primary', '--app-danger']) {
+      expect(names).toContain(n);
+    }
+    const base = tokenRegistry.filter((t) => t.category === 'Base');
+    expect(base.length).toBe(14);
+    expect(base.every((t) => t.kind === 'color')).toBe(true);
+  });
 });
