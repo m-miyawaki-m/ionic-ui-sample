@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { IonButton } from '@ionic/vue';
 
-const meta: Meta<typeof IonButton> = {
+const meta: Meta = {
   title: 'Components/Button',
-  component: IonButton,
   argTypes: {
     color: { control: 'select', options: ['primary', 'success', 'warning', 'danger'] },
     fill: { control: 'select', options: ['solid', 'outline', 'clear'] },
@@ -14,7 +13,7 @@ const meta: Meta<typeof IonButton> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof IonButton>;
+type Story = StoryObj;
 
 export const Playground: Story = {
   render: (args) => ({

@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { IonInput, IonItem, IonList } from '@ionic/vue';
 
-const meta: Meta<typeof IonInput> = {
+const meta: Meta = {
   title: 'Components/Input',
-  component: IonInput,
   argTypes: {
     label: { control: 'text' },
     labelPlacement: { control: 'select', options: ['floating', 'stacked', 'fixed', 'start', 'end'] },
@@ -15,7 +14,7 @@ const meta: Meta<typeof IonInput> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof IonInput>;
+type Story = StoryObj;
 
 export const Playground: Story = {
   render: (args) => ({

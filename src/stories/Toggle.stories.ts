@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { IonToggle, IonList, IonItem } from '@ionic/vue';
 
-const meta: Meta<typeof IonToggle> = {
+const meta: Meta = {
   title: 'Components/Toggle',
-  component: IonToggle,
   argTypes: {
     checked: { control: 'boolean' },
     disabled: { control: 'boolean' },
@@ -13,7 +12,7 @@ const meta: Meta<typeof IonToggle> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof IonToggle>;
+type Story = StoryObj;
 
 export const Playground: Story = {
   render: (args) => ({

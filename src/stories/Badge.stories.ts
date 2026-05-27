@@ -2,9 +2,8 @@ import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { IonBadge, IonList, IonItem, IonLabel, IonChip, IonIcon } from '@ionic/vue';
 import { checkmarkCircle } from 'ionicons/icons';
 
-const meta: Meta<typeof IonBadge> = {
+const meta: Meta = {
   title: 'Components/Badge',
-  component: IonBadge,
   argTypes: {
     color: { control: 'select', options: ['primary', 'success', 'warning', 'danger'] },
     text: { control: 'text' },
@@ -13,7 +12,7 @@ const meta: Meta<typeof IonBadge> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof IonBadge>;
+type Story = StoryObj;
 
 export const Playground: Story = {
   render: (args) => ({
