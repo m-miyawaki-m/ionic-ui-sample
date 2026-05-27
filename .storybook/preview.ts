@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/vue3-vite';
 import { setup } from '@storybook/vue3-vite';
+import { applyOverrides, type ThemeName } from '../src/theme/token-overrides';
 import { IonicVue } from '@ionic/vue';
 
 import '@ionic/vue/css/core.css';
@@ -41,7 +42,9 @@ const preview: Preview = {
   },
   decorators: [
     (story, context) => {
-      document.documentElement.setAttribute('data-theme', context.globals.theme);
+      const theme = context.globals.theme as ThemeName;
+      document.documentElement.setAttribute('data-theme', theme);
+      applyOverrides(theme);
       return { components: { story }, template: '<story />' };
     },
   ],
