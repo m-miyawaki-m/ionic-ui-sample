@@ -17,7 +17,6 @@ export const componentSamples: SampleEntry[] = [
   { id: 'checkbox',  title: 'Checkbox',            route: '/components/checkbox',  category: 'component', description: 'チェックボックス' },
   { id: 'toggle',    title: 'Toggle',              route: '/components/toggle',    category: 'component', description: 'トグルスイッチ' },
   { id: 'radio',     title: 'Radio',               route: '/components/radio',     category: 'component', description: 'ラジオボタン' },
-  { id: 'range',     title: 'Range',               route: '/components/range',     category: 'component', description: 'スライダー' },
   { id: 'searchbar', title: 'Searchbar',           route: '/components/searchbar', category: 'component', description: '検索バー' },
   { id: 'segment',   title: 'Segment',             route: '/components/segment',   category: 'component', description: 'セグメント切替' },
   { id: 'card',      title: 'Card',                route: '/components/card',      category: 'component', description: 'カード' },
@@ -27,6 +26,7 @@ export const componentSamples: SampleEntry[] = [
   { id: 'fab',       title: 'FAB',                 route: '/components/fab',        category: 'component', description: 'フローティングボタン' },
   { id: 'overlays',  title: 'Overlays',            route: '/components/overlays',  category: 'component', description: 'Modal/Alert/ActionSheet/Toast' },
   { id: 'indicators',title: 'Indicators',          route: '/components/indicators',category: 'component', description: 'Loading/Spinner/Progress' },
+  { id: 'calendar',  title: 'Calendar',            route: '/components/calendar',  category: 'component', description: 'カレンダー（ion-datetime）' },
   { id: 'icon-button',title: 'IconButton',         route: '/components/icon-button',category: 'component', description: 'アイコン+ラベルの複合ボタン（自作部品）' },
 ];
 

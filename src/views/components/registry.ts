@@ -10,7 +10,6 @@ export const componentDemoRegistry: Record<string, () => Promise<{ default: Comp
   checkbox:   () => import('./CheckboxDemo.vue'),
   toggle:     () => import('./ToggleDemo.vue'),
   radio:      () => import('./RadioDemo.vue'),
-  range:      () => import('./RangeDemo.vue'),
   searchbar:  () => import('./SearchbarDemo.vue'),
   segment:    () => import('./SegmentDemo.vue'),
   card:       () => import('./CardDemo.vue'),
@@ -20,5 +19,6 @@ export const componentDemoRegistry: Record<string, () => Promise<{ default: Comp
   fab:        () => import('./FabDemo.vue'),
   overlays:   () => import('./OverlaysDemo.vue'),
   indicators: () => import('./IndicatorsDemo.vue'),
+  calendar:   () => import('./CalendarDemo.vue'),
   'icon-button': () => import('./IconButtonDemo.vue'),
 };
