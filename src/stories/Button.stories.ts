@@ -53,3 +53,28 @@ export const Showcase: Story = {
       </div>`,
   }),
 };
+
+export const ColorPatterns: Story = {
+  name: 'Color Patterns (tokens)',
+  render: () => ({
+    components: { IonButton },
+    template: `
+      <div style="display:flex; flex-direction:column; gap:16px; padding:16px; background: var(--app-bg);">
+        <p style="font-family: var(--font-family-base); color: var(--app-text-muted); margin:0;">
+          design-token を Ionic ボタンに当てた色パターン例（Token Editor で色が変わります）
+        </p>
+        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+          <ion-button class="btn-primary1">Primary① 活性</ion-button>
+          <ion-button class="btn-primary1" :disabled="true">Primary① 非活性</ion-button>
+        </div>
+        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+          <ion-button class="btn-primary2">Primary② 活性</ion-button>
+          <ion-button class="btn-primary2" :disabled="true">Primary② 非活性</ion-button>
+        </div>
+        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+          <ion-button fill="outline" class="btn-secondary">Secondary 活性</ion-button>
+          <ion-button fill="outline" class="btn-secondary" :disabled="true">Secondary 非活性</ion-button>
+        </div>
+      </div>`,
+  }),
+};
