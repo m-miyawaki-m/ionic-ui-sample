@@ -39,17 +39,17 @@
 ### 3.3 単一エディタ
 既存 **Token Editor** を統合トークン（土台＋部品）編集に拡張。`token-registry.ts` を統合トークンへ更新。`token-overrides.ts`（テーマ別ランタイム上書き＋リセット）は**そのまま流用**。編集すると **既存 Ionic サンプルも色パターン例も同時に即追従**。
 
-### 3.4 Storybook（`Design System/` ツリー）
-- **Foundation**: `Colors`（統合トークン一覧・3モード横並び）/ `Typography` / `Token Editor`。
-  - `Icons`（Material版）は**廃止**（ionicons 据え置きのため）。
-- **Components / Layout**: **Ionic タグの色パターン例**に作り直し。例：
-  - `Button` … `ion-button` に `.btn-primary1` / `.btn-primary2` / `.btn-secondary` を当て、活性/非活性の色パターン。
-  - `Card` / `Item` / `List` / `Chip` / `Badge` / `Input` … `ion-*` に部品トークンを当てた色パターン。
-  - `Color Patterns`（総覧）… 代表的な `ion-*` を1画面に並べ、テーマ切替＋トークン編集で色がどう変わるかを一覧。
-- 旧 `src/stories/ds/*`（Ds* ベース）は削除し、上記に置換。
+### 3.4 Storybook
+- **Foundation（`src/stories/ds/` に維持）**: `Colors`（統合トークン一覧・3モード横並び）/ `Typography` / `Token Editor`。`Icons`（Material版）は**廃止**（ionicons 据え置きのため）。
+- **色パターンは新規ファイルを作らず、既存の Ionic サンプル stories（`src/stories/*.stories.ts`）に追記**して見せる（新規作成はいったん見送り）。対応する既存ストーリーがある部品から適用：
+  - `Button.stories.ts` … `ion-button` に `.btn-primary1` / `.btn-primary2` / `.btn-secondary` を当てた活性/非活性の色パターン例を追加。
+  - `Select` / `Card` / `Input` / `Badge` / `Overlays` 等、対応する既存ストーリーにトークン由来の色パターン例を追記。
+- **対応する既存ストーリーが無い部品トークン**（`--table-*` / `--menu-*` / `--stepper-*` / `--link-*` / `--scrollbar-*` など）は、トークン定義＋ Token Editor の編集対象としては残すが、**専用デモは今回は作らない**（新規ファイル作成は見送り）。
+- 旧 `src/stories/ds/*` のうち **Ds* コンポーネントを使うストーリー（Button/Table/Dropdown/Dialog/Stepper/Alert/Link/Menu/Scrollbar）は削除**。Foundation 系（Colors/Typography/Token Editor）は残す。
 
 ## 4. 撤去するもの
-- `src/components/ds/*.vue`（9コンポーネント）と旧 `src/stories/ds/*`（Ds* ベースの Button/Table/Dropdown/Dialog/Stepper/Alert/Link/Menu/Scrollbar stories）。
+- `src/components/ds/*.vue`（9コンポーネント）。
+- `src/stories/ds/` のうち **Ds* コンポーネント依存のストーリー**（Button/Table/Dropdown/Dialog/Stepper/Alert/Link/Menu/Scrollbar）。**Foundation 系（Colors/Typography/Token Editor）は残す**。
 - `src/theme/tokens.css`（`design-tokens.css` に統合）。
 - **Material Symbols 一式**：`material-symbols` 依存、`src/theme/ds-icons.css`、Foundation の Material `Icons` ストーリー、`main.ts`/`preview.ts` の該当 import。
   - フォントは **Noto Sans JP のみ残す**（`@fontsource/noto-sans-jp` → `--font-family-base` → `--ion-font-family`）。
@@ -72,8 +72,8 @@
 
 ## 8. 段階分け（計画で詳細化）
 1. トークン統合（`tokens.css`＋`design-tokens.css`→1ファイル、import 付替、`--app-*` 重複排除）＋ registry 更新。
-2. ブリッジ拡張（グローバル＋部品クラス、`--ion-font-family`）。
-3. Material Symbols 撤去（依存・ds-icons.css・Material Icons ストーリー・IconButton 調整）。
-4. Ds* と旧 stories/ds 削除。
-5. Ionic タグの色パターン例ストーリー作成（Foundation 維持＋Components/Layout 作り直し＋Color Patterns 総覧）。
-6. 各段階で4ゲート確認。
+2. ブリッジ拡張（グローバル `--ion-*`＋`--ion-font-family`＋部品パターン用クラス）。
+3. Material Symbols 撤去（`material-symbols` 依存・`ds-icons.css`・Material `Icons` ストーリー・該当 import）。
+4. Ds* コンポーネント＋ Ds* 依存ストーリーの削除（Foundation 系は残す）。
+5. 既存 Ionic サンプル stories への色パターン追記（Button 等、対応する部品のみ。新規ファイルなし）。
+6. 各段階で4ゲート（build / test / lint / build-storybook）確認。
