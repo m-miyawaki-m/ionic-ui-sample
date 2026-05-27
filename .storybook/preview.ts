@@ -8,11 +8,10 @@ import '@ionic/vue/css/normalize.css';
 import '@ionic/vue/css/structure.css';
 import '@ionic/vue/css/typography.css';
 
-import '../src/theme/tokens.css';
+import '../src/theme/design-tokens.css';
 import '../src/theme/ionic-bridge.css';
 import '@fontsource/noto-sans-jp/400.css';
 import '@fontsource/noto-sans-jp/700.css';
-import '../src/theme/design-tokens.css';
 import '../src/theme/ds-icons.css';
 
 setup((app) => {

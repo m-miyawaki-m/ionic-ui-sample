@@ -6,6 +6,30 @@
 
 :root,
 [data-theme="light"] {
+  /* === 土台パレット（--ion-* の駆動元 / tokens.css から統合） === */
+  /* 背景・面 */
+  --app-bg:             #ffffff;  /* 画面全体の背景 */
+  --app-surface:        #f7f7f9;  /* カード・リスト面 */
+  --app-surface-2:      #eeeef2;  /* ヘッダ等の一段濃い面 */
+  /* 文字 */
+  --app-text:           #1a1a1a;  /* 通常の文字色 */
+  --app-text-muted:     #6b7280;  /* 補助・キャプション */
+  --app-text-on-primary:#ffffff;  /* 主色の上に乗る文字 */
+  --app-text-on-success: #ffffff;
+  --app-text-on-warning: #1a1a1a;
+  --app-text-on-danger:  #ffffff;
+  /* 罫線 */
+  --app-border:         #d8d8de;  /* 枠線・区切り線 */
+  /* アクセント */
+  --app-primary:        #3b82f6;
+  --app-primary-rgb:    59, 130, 246;
+  --app-success:        #16a34a;
+  --app-success-rgb:    22, 163, 74;
+  --app-warning:        #d97706;
+  --app-warning-rgb:    217, 119, 6;
+  --app-danger:         #dc2626;
+  --app-danger-rgb:     220, 38, 38;
+
   /* 背景 */
   --bg-base: #ffffff;
   --bg-pattern: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%);
@@ -96,6 +120,26 @@
 }
 
 [data-theme="dark"] {
+  /* === 土台パレット（--ion-* の駆動元 / tokens.css から統合） === */
+  --app-bg:             #121316;
+  --app-surface:        #1c1d22;
+  --app-surface-2:      #26272e;
+  --app-text:           #f2f2f5;
+  --app-text-muted:     #9aa0aa;
+  --app-text-on-primary:#121316;
+  --app-text-on-success: #121316;
+  --app-text-on-warning: #121316;
+  --app-text-on-danger:  #121316;
+  --app-border:         #3a3b42;
+  --app-primary:        #60a5fa;
+  --app-primary-rgb:    96, 165, 250;
+  --app-success:        #4ade80;
+  --app-success-rgb:    74, 222, 128;
+  --app-warning:        #fbbf24;
+  --app-warning-rgb:    251, 191, 36;
+  --app-danger:         #f87171;
+  --app-danger-rgb:     248, 113, 113;
+
   --bg-base: #0f1419;
   --bg-pattern: linear-gradient(135deg, #141b22 0%, #0d1217 100%);
   --menu-color-1: #1a222c;
@@ -171,6 +215,26 @@
 }
 
 [data-theme="practice"] {
+  /* === 土台パレット（--ion-* の駆動元 / tokens.css から統合） === */
+  --app-bg:             #fffaf0;
+  --app-surface:        #fff3da;
+  --app-surface-2:      #ffe8bf;
+  --app-text:           #3a2f1b;
+  --app-text-muted:     #8a7a5c;
+  --app-text-on-primary:#ffffff;
+  --app-text-on-success: #ffffff;
+  --app-text-on-warning: #ffffff;
+  --app-text-on-danger:  #ffffff;
+  --app-border:         #e0c79a;
+  --app-primary:        #c2410c;
+  --app-primary-rgb:    194, 65, 12;
+  --app-success:        #15803d;
+  --app-success-rgb:    21, 128, 61;
+  --app-warning:        #b45309;
+  --app-warning-rgb:    180, 83, 9;
+  --app-danger:         #b91c1c;
+  --app-danger-rgb:     185, 28, 28;
+
   --bg-base: #fffaf0;
   --bg-pattern: linear-gradient(135deg, #fff6e6 0%, #ffeccc 100%);
   --menu-color-1: #fff3da;
