@@ -16,7 +16,6 @@ export const componentDemoRegistry: Record<string, () => Promise<{ default: Comp
   card:       () => import('./CardDemo.vue'),
   list:       () => import('./ListDemo.vue'),
   badge:      () => import('./BadgeDemo.vue'),
-  avatar:     () => import('./AvatarDemo.vue'),
   accordion:  () => import('./AccordionDemo.vue'),
   fab:        () => import('./FabDemo.vue'),
   overlays:   () => import('./OverlaysDemo.vue'),

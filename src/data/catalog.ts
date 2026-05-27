@@ -23,7 +23,6 @@ export const componentSamples: SampleEntry[] = [
   { id: 'card',      title: 'Card',                route: '/components/card',      category: 'component', description: 'カード' },
   { id: 'list',      title: 'List & Item',         route: '/components/list',      category: 'component', description: 'リストと項目' },
   { id: 'badge',     title: 'Badge & Chip',        route: '/components/badge',     category: 'component', description: 'バッジとチップ' },
-  { id: 'avatar',    title: 'Avatar & Thumbnail',  route: '/components/avatar',    category: 'component', description: 'アバターとサムネイル' },
   { id: 'accordion', title: 'Accordion',           route: '/components/accordion', category: 'component', description: 'アコーディオン' },
   { id: 'fab',       title: 'FAB',                 route: '/components/fab',        category: 'component', description: 'フローティングボタン' },
   { id: 'overlays',  title: 'Overlays',            route: '/components/overlays',  category: 'component', description: 'Modal/Alert/ActionSheet/Toast' },
