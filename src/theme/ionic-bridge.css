@@ -15,6 +15,9 @@
   --ion-card-background:       var(--app-surface);
   --ion-tab-bar-background:    var(--app-surface-2);
 
+  /* フォントを Ionic に流し込む */
+  --ion-font-family: var(--font-family-base);
+
   /* 補助文字 */
   --ion-color-step-500:        var(--app-text-muted);
 
@@ -55,4 +58,43 @@
 /* ダーク時は半透明計算用の背景RGBも暗色へ */
 html[data-theme="dark"] {
   --ion-background-color-rgb: 18, 19, 22;
+}
+
+/* =====================================================================
+   部品パターン用クラス: Ionic 部品の CSS 変数をトークンから当てる。
+   Ionic タグに class を付けて「部品の色パターン例」を表現する。
+   ===================================================================== */
+
+/* Button: Primary① / Primary② / Secondary（アウトライン） */
+ion-button.btn-primary1 {
+  --background: var(--btn-primary1-bg-active);
+  --color: var(--btn-primary1-text-active);
+  --background-activated: var(--btn-primary1-bg-active);
+  --background-focused: var(--btn-primary1-bg-active);
+}
+ion-button.btn-primary1.button-disabled {
+  --background: var(--btn-primary1-bg-disabled);
+  --color: var(--btn-primary1-text-disabled);
+}
+ion-button.btn-primary2 {
+  --background: var(--btn-primary2-bg-active);
+  --color: var(--btn-primary2-text-active);
+  --background-activated: var(--btn-primary2-bg-active);
+  --background-focused: var(--btn-primary2-bg-active);
+}
+ion-button.btn-primary2.button-disabled {
+  --background: var(--btn-primary2-bg-disabled);
+  --color: var(--btn-primary2-text-disabled);
+}
+ion-button.btn-secondary {
+  --background: var(--btn-secondary-bg-active);
+  --color: var(--btn-secondary-text-active);
+  --border-width: var(--btn-secondary-border-width);
+  --border-style: solid;
+  --border-color: var(--btn-secondary-border-active);
+}
+ion-button.btn-secondary.button-disabled {
+  --background: var(--btn-secondary-bg-disabled);
+  --color: var(--btn-secondary-text-disabled);
+  --border-color: var(--btn-secondary-border-disabled);
 }
