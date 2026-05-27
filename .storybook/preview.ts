@@ -10,6 +10,7 @@ import '@ionic/vue/css/typography.css';
 
 import '../src/theme/design-tokens.css';
 import '../src/theme/ionic-bridge.css';
+import '../src/theme/embed.css';
 import '@fontsource/noto-sans-jp/400.css';
 import '@fontsource/noto-sans-jp/700.css';
 

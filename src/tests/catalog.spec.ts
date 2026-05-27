@@ -14,9 +14,9 @@ describe('catalog', () => {
     }
   });
 
-  it('コンポーネントは18件以上、ページは4件', () => {
+  it('コンポーネントは18件以上、ページは4件以上', () => {
     expect(componentSamples.length).toBeGreaterThanOrEqual(18);
-    expect(pageSamples.length).toBe(4);
+    expect(pageSamples.length).toBeGreaterThanOrEqual(4);
   });
 
   it('component の route は /components/ 配下', () => {

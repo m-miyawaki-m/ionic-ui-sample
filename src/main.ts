@@ -24,6 +24,7 @@ import '@ionic/vue/css/display.css';
 import './theme/variables.css';
 import './theme/design-tokens.css';
 import './theme/ionic-bridge.css';
+import './theme/embed.css';
 import '@fontsource/noto-sans-jp/400.css';
 import '@fontsource/noto-sans-jp/700.css';
 

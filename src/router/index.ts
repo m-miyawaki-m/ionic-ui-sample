@@ -28,6 +28,7 @@ const routes: RouteRecordRaw[] = [
       { path: 'tab3', component: () => import('../views/pages/tabs/Tab3.vue') },
     ],
   },
+  { path: '/pages/embedded', component: () => import('../views/pages/EmbeddedPage.vue') },
   { path: '/settings', component: () => import('../views/SettingsPage.vue') },
 ];
 

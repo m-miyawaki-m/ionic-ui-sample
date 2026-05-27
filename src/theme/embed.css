@@ -1,0 +1,16 @@
+/* =====================================================================
+   埋め込み用ユーティリティ: 部品をサイズ制限した枠に収める。
+   ion-page/ion-content の全画面chromeを使わず、任意の領域に部品を置きたい
+   とき（Androidアプリの一部品として埋め込む等）に枠へ付与する。
+   スクロールはこの枠内で完結する。
+   ===================================================================== */
+.embed-frame {
+  max-width: 100%;
+  overflow: auto;
+  border: 1px solid var(--app-border);
+  border-radius: var(--radius-md);
+  background: var(--app-bg);
+  color: var(--app-text);
+  box-sizing: border-box;
+  padding: var(--spacing-3);
+}

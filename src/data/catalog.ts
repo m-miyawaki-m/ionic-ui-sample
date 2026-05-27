@@ -34,6 +34,7 @@ export const pageSamples: SampleEntry[] = [
   { id: 'login', title: 'ログイン / サインアップ', route: '/pages/login', category: 'page', description: '認証画面の雛形' },
   { id: 'list-detail',  title: 'リスト + 詳細',      route: '/pages/list',  category: 'page', description: 'マスター詳細型遷移' },
   { id: 'tabs',  title: 'タブレイアウト',          route: '/pages/tabs',  category: 'page', description: '下部タブナビ' },
+  { id: 'embedded', title: '埋め込み（サイズ制限）', route: '/pages/embedded', category: 'page', description: '部品をサイズ制限した枠に収める例' },
   { id: 'settings', title: '設定ページ',           route: '/settings',    category: 'page', description: 'テーマ切替を含む設定' },
 ];
 

@@ -30,6 +30,11 @@ export const Playground: Story = {
 };
 
 export const Showcase: Story = {
+  args: {
+    presentation: "date-time",
+    readonly: true
+  },
+
   render: () => ({
     components: { IonDatetime },
     template: `
@@ -37,5 +42,5 @@ export const Showcase: Story = {
         <ion-datetime presentation="date" />
         <ion-datetime presentation="time" />
       </div>`,
-  }),
+  })
 };
