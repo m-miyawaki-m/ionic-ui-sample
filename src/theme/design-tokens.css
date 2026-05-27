@@ -1,0 +1,246 @@
+/* =====================================================================
+   デザインシステム トークン — 色を変えたいときはこのファイルを編集します。
+   3モードは [data-theme] 属性セレクタで定義（入れ子のテーマ表示が可能）。
+   :root と light は同値（data-theme 未設定でも light で表示）。
+   ===================================================================== */
+
+:root,
+[data-theme="light"] {
+  /* 背景 */
+  --bg-base: #ffffff;
+  --bg-pattern: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%);
+  /* メニュー: 1=通常 2=ホバー 3=選択 4=無効/区切り */
+  --menu-color-1: #f4f6f9;
+  --menu-color-2: #e7ecf3;
+  --menu-color-3: #d8e3f3;
+  --menu-color-4: #c3ccd8;
+  --menu-badge: #dc2626;
+  --menu-open: #e0e7f1;
+  /* テキスト */
+  --text-body: #1f2937;
+  --text-heading: #111827;
+  --text-input-filled: #1f2937;
+  --text-form-guide: #6b7280;
+  /* 表 */
+  --table-header-bg: #f1f5f9;
+  --table-cell-bg-1: #ffffff;
+  --table-cell-bg-2: #f8fafc;
+  --table-border: #d8dee6;
+  --table-border-width: 1px;
+  /* プルダウン */
+  --dropdown-bg: #ffffff;
+  --dropdown-bg-selected: #e8f0fe;
+  /* ダイアログ */
+  --dialog-list-item-bg: #ffffff;
+  --dialog-list-item-bg-selected: #e8f0fe;
+  --dialog-list-item-bg-unselected: #f8fafc;
+  --dialog-overlay: rgba(0, 0, 0, 0.3);
+  /* ステッパー: 1=完了 2=現在 3=未完了 4=エラー */
+  --stepper-color-1: #16a34a;
+  --stepper-color-2: #2563eb;
+  --stepper-color-3: #cbd5e1;
+  --stepper-color-4: #dc2626;
+  /* リンク */
+  --link-primary: #2563eb;
+  --link-sub: #475569;
+  --link-visited: #7c3aed;
+  /* ボタン Primary① (主要確定) */
+  --btn-primary1-bg-active: #2563eb;
+  --btn-primary1-text-active: #ffffff;
+  --btn-primary1-bg-disabled: #b9c5da;
+  --btn-primary1-text-disabled: #eef2f8;
+  /* ボタン Primary② (次へ/遷移) */
+  --btn-primary2-bg-active: #0f766e;
+  --btn-primary2-text-active: #ffffff;
+  --btn-primary2-bg-disabled: #b4cdca;
+  --btn-primary2-text-disabled: #eef5f4;
+  /* ボタン Secondary (アウトライン) */
+  --btn-secondary-border-active: #2563eb;
+  --btn-secondary-text-active: #2563eb;
+  --btn-secondary-bg-active: transparent;
+  --btn-secondary-border-disabled: #c3ccd8;
+  --btn-secondary-text-disabled: #9aa4b2;
+  --btn-secondary-bg-disabled: transparent;
+  --btn-secondary-border-width: 1px;
+  --btn-secondary-icon-gap: 8px;
+  /* アラート */
+  --alert-ng: #dc2626;
+  --alert-warning: #d97706;
+  --alert-ok: #16a34a;
+  /* スクロールバー */
+  --scrollbar-track: #eef2f7;
+  --scrollbar-thumb: #c3ccd8;
+  --scrollbar-thumb-hover: #a8b3c2;
+  /* タイポグラフィ */
+  --font-family-base: 'Noto Sans JP', system-ui, sans-serif;
+  --font-size-title: 23px;
+  --font-size-heading: 20px;
+  --font-size-body: 16px;
+  --font-size-caption: 14px;
+  --line-height-title: 1.4;
+  --line-height-heading: 1.5;
+  --line-height-body: 1.6;
+  --line-height-caption: 1.5;
+  /* 追加（コンポーネント実装に必要な最小限） */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.16);
+  --focus-ring-color: #2563eb;
+  --focus-ring-width: 2px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --transition-base: 160ms;
+}
+
+[data-theme="dark"] {
+  --bg-base: #0f1419;
+  --bg-pattern: linear-gradient(135deg, #141b22 0%, #0d1217 100%);
+  --menu-color-1: #1a222c;
+  --menu-color-2: #232d3a;
+  --menu-color-3: #2d3b4e;
+  --menu-color-4: #3a4656;
+  --menu-badge: #f87171;
+  --menu-open: #243040;
+  --text-body: #e5e9f0;
+  --text-heading: #f3f6fb;
+  --text-input-filled: #e5e9f0;
+  --text-form-guide: #9aa4b2;
+  --table-header-bg: #1c2630;
+  --table-cell-bg-1: #11171e;
+  --table-cell-bg-2: #161d26;
+  --table-border: #2d3b4e;
+  --table-border-width: 1px;
+  --dropdown-bg: #1a222c;
+  --dropdown-bg-selected: #2a3a52;
+  --dialog-list-item-bg: #1a222c;
+  --dialog-list-item-bg-selected: #2a3a52;
+  --dialog-list-item-bg-unselected: #161d26;
+  --dialog-overlay: rgba(0, 0, 0, 0.5);
+  --stepper-color-1: #4ade80;
+  --stepper-color-2: #60a5fa;
+  --stepper-color-3: #475569;
+  --stepper-color-4: #f87171;
+  --link-primary: #60a5fa;
+  --link-sub: #94a3b8;
+  --link-visited: #c4b5fd;
+  --btn-primary1-bg-active: #3b82f6;
+  --btn-primary1-text-active: #ffffff;
+  --btn-primary1-bg-disabled: #2a3645;
+  --btn-primary1-text-disabled: #6b7888;
+  --btn-primary2-bg-active: #14b8a6;
+  --btn-primary2-text-active: #04201d;
+  --btn-primary2-bg-disabled: #23423e;
+  --btn-primary2-text-disabled: #6b8c88;
+  --btn-secondary-border-active: #60a5fa;
+  --btn-secondary-text-active: #60a5fa;
+  --btn-secondary-bg-active: transparent;
+  --btn-secondary-border-disabled: #3a4656;
+  --btn-secondary-text-disabled: #6b7888;
+  --btn-secondary-bg-disabled: transparent;
+  --btn-secondary-border-width: 1px;
+  --btn-secondary-icon-gap: 8px;
+  --alert-ng: #f87171;
+  --alert-warning: #fbbf24;
+  --alert-ok: #4ade80;
+  --scrollbar-track: #161d26;
+  --scrollbar-thumb: #3a4656;
+  --scrollbar-thumb-hover: #4a586a;
+  --font-family-base: 'Noto Sans JP', system-ui, sans-serif;
+  --font-size-title: 23px;
+  --font-size-heading: 20px;
+  --font-size-body: 16px;
+  --font-size-caption: 14px;
+  --line-height-title: 1.4;
+  --line-height-heading: 1.5;
+  --line-height-body: 1.6;
+  --line-height-caption: 1.5;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --focus-ring-color: #60a5fa;
+  --focus-ring-width: 2px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --transition-base: 160ms;
+}
+
+[data-theme="practice"] {
+  --bg-base: #fffaf0;
+  --bg-pattern: linear-gradient(135deg, #fff6e6 0%, #ffeccc 100%);
+  --menu-color-1: #fff3da;
+  --menu-color-2: #ffe8bf;
+  --menu-color-3: #ffd9a0;
+  --menu-color-4: #e8c99a;
+  --menu-badge: #c2410c;
+  --menu-open: #ffe2b3;
+  --text-body: #3a2f1b;
+  --text-heading: #2a2010;
+  --text-input-filled: #3a2f1b;
+  --text-form-guide: #8a7a5c;
+  --table-header-bg: #ffeccc;
+  --table-cell-bg-1: #fffaf0;
+  --table-cell-bg-2: #fff4e0;
+  --table-border: #e0c79a;
+  --table-border-width: 1px;
+  --dropdown-bg: #fffaf0;
+  --dropdown-bg-selected: #ffe2b3;
+  --dialog-list-item-bg: #fffaf0;
+  --dialog-list-item-bg-selected: #ffe2b3;
+  --dialog-list-item-bg-unselected: #fff4e0;
+  --dialog-overlay: rgba(60, 40, 10, 0.3);
+  --stepper-color-1: #15803d;
+  --stepper-color-2: #c2410c;
+  --stepper-color-3: #d8c39a;
+  --stepper-color-4: #b91c1c;
+  --link-primary: #c2410c;
+  --link-sub: #8a6d3b;
+  --link-visited: #9333ea;
+  --btn-primary1-bg-active: #c2410c;
+  --btn-primary1-text-active: #ffffff;
+  --btn-primary1-bg-disabled: #e6c7a8;
+  --btn-primary1-text-disabled: #fff4e8;
+  --btn-primary2-bg-active: #b45309;
+  --btn-primary2-text-active: #ffffff;
+  --btn-primary2-bg-disabled: #e6d2a8;
+  --btn-primary2-text-disabled: #fff7e8;
+  --btn-secondary-border-active: #c2410c;
+  --btn-secondary-text-active: #c2410c;
+  --btn-secondary-bg-active: transparent;
+  --btn-secondary-border-disabled: #d8c39a;
+  --btn-secondary-text-disabled: #b09a72;
+  --btn-secondary-bg-disabled: transparent;
+  --btn-secondary-border-width: 1px;
+  --btn-secondary-icon-gap: 8px;
+  --alert-ng: #b91c1c;
+  --alert-warning: #b45309;
+  --alert-ok: #15803d;
+  --scrollbar-track: #ffeccc;
+  --scrollbar-thumb: #e0c79a;
+  --scrollbar-thumb-hover: #d0b487;
+  --font-family-base: 'Noto Sans JP', system-ui, sans-serif;
+  --font-size-title: 23px;
+  --font-size-heading: 20px;
+  --font-size-body: 16px;
+  --font-size-caption: 14px;
+  --line-height-title: 1.4;
+  --line-height-heading: 1.5;
+  --line-height-body: 1.6;
+  --line-height-caption: 1.5;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-sm: 0 1px 2px rgba(120, 80, 20, 0.12);
+  --shadow-md: 0 4px 16px rgba(120, 80, 20, 0.2);
+  --focus-ring-color: #c2410c;
+  --focus-ring-width: 2px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --transition-base: 160ms;
+}
