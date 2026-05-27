@@ -8,6 +8,14 @@
 
 ---
 
+## 0. 検討結果（決定 / 2026-05-27）
+
+- **アイコンはいったん ionicons のまま据え置く**。Ionic サンプル側の `<ion-icon>`/`ionicons` を Material Symbols へ全置換する作業は**今回は見送り**（将来の課題）。
+- 本ドキュメントはその検討結果（＝置換するなら対象外となる「Ionic 内蔵アイコン」の調査結果）として保存する成果物。
+- なお **Design System 層（`src/components/ds/`・`src/stories/ds/`）は Ionic を使わない**ため、そちらのアイコンは Material Symbols を継続利用する（Ionic 側の据え置き判断とは独立）。
+
+---
+
 ## 1. 前提
 
 - 今回の Material Symbols 移行で置き換えるのは「**私たちが明示的に `<ion-icon>` で置いたアイコン**」だけです。
